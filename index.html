@@ -1,0 +1,22 @@
+<html ng-app="MyApp">
+<head>
+	<link rel="stylesheet" href="src/jmfDatetimepicker.css">
+</head>
+<body ng-controller="myCtrl">
+	<jmf-datetimepicker ng-model="dtNew"></jmf-datetimepicker>
+	<div>
+		<input type="text"></input>
+		<div>some other thing on the page</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="src/jmfDatetimepicker.js"></script>
+	<script type="text/javascript">
+		angular
+		.module('MyApp', ['jmfDatetimepicker'])
+		.controller('myCtrl', function($scope){
+			$scope.dtNew = new Date(Date.now());
+		});
+	</script>
+</body>
+</html>

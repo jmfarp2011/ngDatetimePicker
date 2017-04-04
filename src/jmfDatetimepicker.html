@@ -1,0 +1,44 @@
+<input type="text" ng-model="ngModel" />
+<input type="button" ng-click="showHide()">
+<div class="jmf jmf-datetimepicker" ng-show="show">
+  <div class="settings">
+    <span>Month</span>
+    <select class="month" ng-model="month" ng-change="buildCalendar()">
+      <option ng-value="0">January</option>
+      <option ng-value="1">February</option>
+      <option ng-value="2">March</option>
+      <option ng-value="3">April</option>
+      <option ng-value="4">May</option>
+      <option ng-value="5">June</option>
+      <option ng-value="6">July</option>
+      <option ng-value="7">August</option>
+      <option ng-value="8">September</option>
+      <option ng-value="9">October</option>
+      <option ng-value="10">November</option>
+      <option ng-value="11">December</option>
+    </select>
+    <span>Year</span>
+    <input type="number" class="year" ng-model="year" ng-change="buildCalendar()" />
+  </div>
+  <div class="time">
+    <span>Time </span>
+    <input type="number" ng-model="hour" class="hour" max="23" /> : 
+    <input type="number" ng-model="minute" class="minute" max="59" />
+  </div>
+  <div class="calendar">
+    <table>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+      <tr ng-repeat="week in weeks">
+        <td ng-class="{'inactive': d.inactive, 'active': d.day == day}" ng-repeat="d in week track by $index"><a ng-if="!d.inactive" href="#" ng-click="selectDay(d.day);"> {{d.day || ""}}</a></td>
+      </tr>
+    </table>
+  </div>
+</div>
