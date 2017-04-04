@@ -1,0 +1,49 @@
+.jmf-datetimepicker {
+  border: 1px solid black;
+  width: 300px;
+  position: absolute;
+  background-color: #fff;
+}
+
+.jmf-datetimepicker > .settings, .jmf-datetimepicker > .time {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.jmf-datetimepicker > .settings > .year, .jmf-datetimepicker > .settings > .month, .jmf-datetimepicker > .time > .hour, .jmf-datetimepicker > .time > .minute {
+  width: 85px;
+}
+
+.jmf-datetimepicker > .calendar td {
+  font-size: 12px;
+  padding: 3px 0px;
+  vertical-align: middle;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: #aaa;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #888, 3px 3px 5px #ddd inset;
+  text-align: center;
+  min-width: 37px;
+}
+
+.jmf-datetimepicker > .calendar td.inactive {
+  background-color: #888;
+  box-shadow: 0px 0px 0px #fff;
+}
+
+
+.jmf-datetimepicker > .calendar td.active {
+  background-color: #55f;
+  border: 2px solid black;
+  box-shadow: 3px 3px 5px #444, 3px 3px 5px #aaa inset;
+}
+
+.jmf-datetimepicker > .calendar td > a{
+  text-decoration: none;
+  color: #222;
+}
+
+.jmf-hidden {
+  display: none;
+}
